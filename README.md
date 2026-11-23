@@ -4,6 +4,8 @@ Protótipo de IoT que monitora a temperatura de uma geladeira de vacinas. Um sen
 
 Trabalho da disciplina Objetos Inteligentes Conectados, Universidade Presbiteriana Mackenzie, 2026. Autor: Pedro Emmanuel Esteves.
 
+- Simulação no Wokwi: <https://wokwi.com/projects/481455068710202369>
+
 ![Arquitetura do protótipo](docs/img/arquitetura.png)
 
 ## Como funciona
@@ -27,6 +29,10 @@ O fluxo completo está em [docs/img/fluxograma.png](docs/img/fluxograma.png).
 ## Como reproduzir
 
 ### No Wokwi (sem hardware)
+
+O projeto pronto está em <https://wokwi.com/projects/481455068710202369>: basta abrir e iniciar a simulação. Clique no DS18B20 e mova o controle de temperatura para simular os desvios.
+
+Para montar do zero:
 
 1. Abra <https://wokwi.com/projects/new/esp32>.
 2. Copie o conteúdo de [`firmware/sketch.ino`](firmware/sketch.ino) para a aba `sketch.ino`.
