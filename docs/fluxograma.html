@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset="utf-8">
+<body style="margin:0;background:#fff">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1180" font-family="Liberation Sans, Arial, sans-serif" font-size="16">
+<defs>
+  <marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z"/></marker>
+</defs>
+<g fill="#fff" stroke="#000" stroke-width="1.5">
+  <rect x="360" y="15" width="280" height="44" rx="22"/>
+  <rect x="330" y="85" width="340" height="60"/>
+  <rect x="330" y="172" width="340" height="60"/>
+  <polygon points="500,258 660,303 500,348 340,303"/>
+  <rect x="720" y="275" width="250" height="56"/>
+  <rect x="330" y="378" width="340" height="44"/>
+  <polygon points="500,448 660,493 500,538 340,493"/>
+  <rect x="330" y="568" width="340" height="44"/>
+  <polygon points="500,638 660,683 500,728 340,683"/>
+  <rect x="720" y="655" width="250" height="56"/>
+  <rect x="330" y="758" width="340" height="76"/>
+  <polygon points="500,860 660,905 500,950 340,905"/>
+  <rect x="720" y="877" width="250" height="56"/>
+  <rect x="330" y="980" width="340" height="60"/>
+  <rect x="330" y="1066" width="340" height="60"/>
+  <rect x="30" y="465" width="250" height="56"/>
+</g>
+<g text-anchor="middle">
+  <text x="500" y="42">Início (energização)</text>
+  <text x="500" y="110">Configura GPIOs em nível baixo</text><text x="500" y="131">e o DS18B20 em 12 bits</text>
+  <text x="500" y="197">Conecta ao Wi-Fi e ao broker MQTT</text><text x="500" y="218">(Last Will, status online, assina comando)</text>
+  <text x="500" y="299">Broker</text><text x="500" y="318">conectado?</text>
+  <text x="845" y="299" font-size="15">Tenta reconectar</text><text x="845" y="318" font-size="15">a cada 5 s</text>
+  <text x="500" y="405">Processa mensagens MQTT recebidas</text>
+  <text x="500" y="489">Chegou</text><text x="500" y="508">comando?</text>
+  <text x="155" y="489" font-size="15">Aciona o atuador pedido</text><text x="155" y="508" font-size="15">e publica a confirmação</text>
+  <text x="500" y="595">A cada 5 s: lê o DS18B20 (750 ms)</text>
+  <text x="500" y="679">Leitura</text><text x="500" y="698">válida?</text>
+  <text x="845" y="679" font-size="15">Descarta a leitura,</text><text x="845" y="698" font-size="15">mantém os atuadores</text>
+  <text x="500" y="783">Aplica a regra: alarme NORMAL, ALTA</text><text x="500" y="804">ou BAIXA (histerese de 0,5 °C) e</text><text x="500" y="825">refrigeração (liga &gt; 8 °C, desliga em 6 °C)</text>
+  <text x="500" y="901">Alarme</text><text x="500" y="920">mudou?</text>
+  <text x="845" y="901" font-size="15">Publica o novo estado</text><text x="845" y="920" font-size="15">em alarme (retida)</text>
+  <text x="500" y="1005">A cada 30 s: publica a temperatura</text><text x="500" y="1026">e repete o estado do alarme</text>
+  <text x="500" y="1091">Atualiza relé, LED e buzzer; se algo</text><text x="500" y="1112">mudou, publica em atuadores</text>
+</g>
+<g font-size="14">
+  <text x="668" y="295">Não</text><text x="510" y="368">Sim</text>
+  <text x="300" y="485">Sim</text><text x="510" y="558">Não</text>
+  <text x="668" y="675">Não</text><text x="510" y="748">Sim</text>
+  <text x="668" y="897">Sim</text><text x="510" y="970">Não</text>
+</g>
+<g stroke="#000" stroke-width="1.5" fill="none" marker-end="url(#a)">
+  <path d="M500,59 V85"/><path d="M500,145 V172"/><path d="M500,232 V258"/>
+  <path d="M660,303 H720"/><path d="M845,331 V400 H670"/>
+  <path d="M500,348 V378"/><path d="M500,422 V448"/>
+  <path d="M340,493 H280"/><path d="M155,521 V590 H330"/>
+  <path d="M500,538 V568"/><path d="M500,612 V638"/>
+  <path d="M660,683 H720"/><path d="M970,683 H988 V1096 H670"/>
+  <path d="M500,728 V758"/><path d="M500,834 V860"/>
+  <path d="M660,905 H720"/><path d="M795,933 V1010 H670"/>
+  <path d="M500,950 V980"/><path d="M500,1040 V1066"/>
+  <path d="M500,1126 V1160 H15 V303 H340"/>
+</g>
+</svg>

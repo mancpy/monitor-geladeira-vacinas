@@ -1,0 +1,21 @@
+conectado a broker.hivemq.com:1883, assinando rededefrio/geladeira01/#
+01:25:37.217  status       online (retida)
+01:25:37.217  alarme       NORMAL (retida)
+01:25:41.139  temperatura  5.00
+01:25:41.419  alarme       NORMAL
+01:25:41.701  latencia     {"n":14,"sensor_ms":125,"millis":453432}
+01:25:56.605  alarme       ALTA
+01:25:56.808  atuadores    {"rele":1,"led":1,"buzzer":1,"origem":"automatico"}
+01:26:29.675  alarme       NORMAL
+01:26:29.873  atuadores    {"rele":1,"led":0,"buzzer":0,"origem":"automatico"}
+01:26:45.222  atuadores    {"rele":0,"led":0,"buzzer":0,"origem":"automatico"}
+01:27:19.131  alarme       BAIXA
+01:27:19.426  atuadores    {"rele":0,"led":1,"buzzer":1,"origem":"automatico"}
+01:27:19.469  alarme       BAIXA
+01:27:19.685  temperatura  1.00
+01:27:20.964  latencia     {"n":15,"sensor_ms":290,"millis":488100}
+01:28:01.153  comando      SILENCIAR
+01:28:01.570  atuadores    {"rele":0,"led":1,"buzzer":0,"origem":"comando"}
+01:28:23.323  alarme       NORMAL
+01:28:23.509  atuadores    {"rele":0,"led":0,"buzzer":0,"origem":"automatico"}
+01:30:38.606  status       offline
